@@ -1,0 +1,519 @@
+Q-1 Write a function to calculate the area of a circle. (TSRS)
+
+Ans -
+#include<stdio.h>
+
+#include<conio.h>
+
+float area(int);
+
+int main()
+
+{
+
+    int r;
+
+    float a;
+
+    printf("Enter a number:");
+
+    scanf("%d",&r);
+
+    a=area(r);
+
+    printf("Sum is %f",a);
+
+}
+
+
+float area(int j)
+
+{
+
+    float k;
+
+    k=3.14*j*j;
+
+    return k;
+
+}
+____________________________________________________________________________
+Q-2 Write a function to calculate simple interest. (TSRS) ?
+Ans = 
+
+
+#include<stdio.h>
+
+#include<conio.h>
+
+
+int si(int,int,int);
+
+int main()
+
+{
+
+   int x,y,z;
+
+   float k;
+
+   printf("Enter a number:");
+   scanf("%d%d%d",&x,&y,&z);
+
+   k=si(x,y,z);
+
+   printf("%f",k);
+
+}
+
+
+
+int si(int a,int b,int c)
+{
+   float s;
+   s=(a*b*c)/100.0;
+
+   return s;
+}
+____________________________________________________________________________
+Q-3 Write a function to check whether a given number is even or odd. Return 1 if the
+ number is even, otherwise return 0. (TSRS)
+ ? 
+Ans -
+#include<stdio.h>
+
+#include<conio.h>
+
+
+int oe(int);
+
+int main()
+
+{
+    
+   int a,k;
+
+   printf("Enter a number:");
+
+   scanf("%d",&a);
+
+   k=oe(a);
+
+   if(k==1)
+
+      printf("Even");
+
+   else
+
+      printf("Odd");
+
+}
+
+int oe(int l)
+
+{
+
+   if(l%2==0)
+
+      return 1;
+
+   else
+
+      return 0;
+
+}
+____________________________________________________________________________
+Q-4 Write a function to print first N natural numbers (TSRN) ?
+Ans - 
+
+
+#include<stdio.h>
+
+#include<conio.h>
+
+
+void N(int);
+
+void main()
+
+{
+
+    int n;
+
+    printf("Enter a number:");
+
+    scanf("%d",&n);
+
+    N(n);
+
+    getch();
+
+}
+
+void N(int j)
+
+{
+
+    int i;
+
+    for(i=1;i<=j;i++)
+
+    printf("%d\n",i);
+
+}
+____________________________________________________________________________
+Q-5 Write a function to print first N odd natural numbers. (TSRN) ?
+Ans -
+
+
+#include<stdio.h>
+
+#include<conio.h>
+
+
+void odd(int);
+
+void main()
+
+{
+
+    int n;
+
+    printf("Enter a number:");
+
+    scanf("%d",&n);
+
+    odd(n);
+
+    getch();
+
+}
+
+void odd(int j)
+
+{
+
+    int i;
+
+    for(i=1;i<=j;i++)
+
+    printf(" %d",i*2-1);
+
+}
+____________________________________________________________________________
+Q-6 Write a function to calculate the factorial of a number.(TSRS) ?
+Ans -
+
+
+#include<stdio.h>
+
+#include<conio.h>
+
+
+int fact(int);
+
+int main()
+
+{
+
+    int f,k;
+
+    printf("Enter a number:");
+
+    scanf("%d",&f);
+
+    k=fact(f);
+
+    printf("factorial is %d",k);
+
+}
+
+int fact(int j)
+
+{
+
+    int i,s=1;
+
+    for(i=1;i<=j;i++)
+
+    s=s*i;
+
+    return s;
+
+}
+____________________________________________________________________________
+Q-7 Write a function to calculate the number of combinations one can make from n items
+and r selected at a time. (TSRS)
+Ans-
+
+
+
+
+
+____________________________________________________________________________
+Q-8 Write a function to calculate the number of arrangements one can make from n items
+and r selected at a time. (TSRS)
+Ans-
+
+
+
+
+____________________________________________________________________________
+Q-9 Write a function to calculate LCM of two numbers. (TSRS) ?
+Ans-
+#include<stdio.h>
+#include<conio.h>
+
+int LCM(int,int);
+int main()
+{
+ int x,y,l;
+ printf("Enter two number:");
+ scanf("%d%d",&x,&y);
+ l=LCM(x,y);
+ printf("LCM is %d",l);
+ getch();
+}
+int LCM(int a,int b)
+{
+    int k;
+    for(k=a>b?a:b;k<=a*b;k++).
+    if(k%a==0 && k%b==0)
+    break;
+    return k;
+}
+____________________________________________________________________________
+Q-10 Write a function to calculate HCF of two numbers. (TSRS) ?
+Ans- 
+#include<stdio.h>
+#include<conio.h>
+
+int HCF(int,int);
+int main()
+{
+ int a,b,c;
+ printf("Enter two number:");
+ scanf("%d%d",&a,&b);
+ c=HCF(a,b);
+ printf("HCF is %d",c);
+ getch();
+}
+int HCF(int k,int l)
+{
+ int m;
+ if(m=k<l)
+ m=k;
+ else
+ m=l;
+ while(m>=1)
+ if(k%m==0&&l%m==0)
+ break;
+ return m;
+}
+____________________________________________________________________________
+Q-11 Write a function to check whether a given number is Prime or not. (TSRS) ?
+Ans -
+
+#include<stdio.h>
+
+#include<conio.h>
+
+int PN(int);
+
+int main()
+
+{
+
+    int a,s;
+
+    printf("Enter a number:");
+
+    scanf("%d",&a);
+
+    s=PN(a);
+
+    if(s==1)
+
+       printf("Prime");
+
+    else
+
+       printf("not");
+
+}
+
+int PN(int x)
+
+{
+
+    int i;
+
+    for(i=2;i<=x-1;i++)
+
+    if(x%i==0)
+
+      break;
+
+    if(i==x)
+
+       return 1;
+
+    else
+
+       return 0;
+
+}
+____________________________________________________________________________
+Q-12 Write a function to find the next prime number of a given number. (TSRS)
+Ans-
+#include<stdio.h>
+
+
+#include<conio.h>
+
+
+int prime(int);
+
+int main()
+
+
+{
+
+
+    int n,s;
+
+
+    printf("Enter a number:");
+
+
+    scanf("%d",&n);
+
+    s=prime(n);
+
+    printf("Next prime number is %d",s);
+
+    
+return 0;
+
+
+}
+
+
+int prime(int a)
+
+{
+
+    int i,x;
+
+    for(i=a+1;;i++)
+
+
+    {
+
+
+    for(x=2;x<=i-1;x++)
+ 
+
+   {
+
+
+    if(i%x==0)
+
+
+    break;
+
+ 
+   }
+ 
+
+   if(i==x)
+
+ 
+   break;
+
+
+    }
+
+
+    return i;
+
+
+}
+____________________________________________________________________________
+Q-12 Write a function to print first N prime numbers ?
+Ans -
+#include<stdio.h>
+
+#include<conio.h>
+
+
+void prime(int);
+
+int main()
+
+{
+
+    int n;
+    printf("Enter a numbers:\n");
+    scanf("%d",&n);
+
+    prime(n);
+    getch();
+
+}
+
+void prime(int x)
+{
+
+   int count=1,flag,i=2,j;
+
+    while(count<=x)
+    {
+
+       flag=0;
+
+       for(j=2;j<=i/2;j++)
+
+       {
+		
+            if(i%j==0)
+
+	{
+
+	    flag=1;
+	
+                break;
+
+            }
+	
+       }
+
+       if(flag==0)
+	
+       {
+		
+           printf("%d ",i);
+	
+           count++;
+		 
+       }
+
+       i++;
+
+ }
+
+}
+____________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+____________________________________________________________________________
